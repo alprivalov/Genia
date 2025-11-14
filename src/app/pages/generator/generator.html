@@ -1,0 +1,15 @@
+<textarea [(ngModel)]="text" placeholder="Votre prompt..."></textarea>
+
+<button (click)="generate()">Générer</button>
+
+<!-- SUMMARY -->
+<div *ngIf="summary" class="summary-block">
+  <h3>Résumé généré :</h3>
+  <p>{{ summary }}</p>
+</div>
+
+<!-- PDF PREVIEW -->
+<div *ngIf="pdfUrl" class="pdf-preview">
+  <h3>Preview du PDF :</h3>
+  <iframe [src]="pdfUrl" width="100%" height="600px"></iframe>
+</div>
